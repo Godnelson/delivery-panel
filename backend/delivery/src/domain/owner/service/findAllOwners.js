@@ -1,8 +1,8 @@
 import Owner from "../schema"
 
-export const createOwner = (owner) => {
+export const findAllOwners = () => {
     try{
-        return Owner.create(owner)
+        return Owner.find()
     }catch(e){
         console.error(e)
     }
