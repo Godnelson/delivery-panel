@@ -1,12 +1,14 @@
 FROM node:lts-slim
 
+RUN mkdir -p /app
+
 WORKDIR /app
 
 COPY . .
 
-RUN cd /app npm i
+RUN npm i
 
-CMD ["node", "app/index.js"]
+CMD ["node", "index.js"]
 
 EXPOSE 8080
 

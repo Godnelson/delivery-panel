@@ -1,5 +1,5 @@
 import express from "express";
-import { uploadFile } from "./fileUploader/upload.js";
+import { uploadFile } from "./fileManager/upload.js";
 import multer from "multer";
 
 const server = express()
@@ -8,9 +8,7 @@ const upload = multer()
 server.use(express.json())
 
 
-server.post('/', upload.any(), (req, res) => {
-    console.log(req.files[0])
-    uploadFile(req.files[0].buffer, req.files[0].originalname)
+server.get('/', upload.any(), (req, res) => {
     return res.send("Hello World")
 })
 
