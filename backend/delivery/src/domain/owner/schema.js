@@ -1,14 +1,9 @@
-import { Schema } from "mongoose"
-
-export class Owner {
-    constructor(id, name, prof_pic) {
-        this.id = id
-        this.name = name
-        this.prof_pic = prof_pic
-    }
-}
+import mongoose, { Schema } from "mongoose"
 
 const OwnerSchema = new Schema({
     name: {first: String, last: String},
     prof_pic: String
 })
+
+const Owner = mongoose.model('Owner', OwnerSchema)
+export default Owner
