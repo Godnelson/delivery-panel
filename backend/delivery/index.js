@@ -9,12 +9,17 @@ server.use(express.json())
 
 
 server.get('/', upload.any(), async (req, res) => {
-    await NewMongoConnection()
-    return res.json({hello:"world"})
+    return res.json({ hello: "world" })
 })
 
-server.listen(8080, () => {
-        console.log("server is running")
+server.listen(8080, async () => {
+    const dbConnectionResult = await NewMongoConnection()
+    if (dbConnectionResult.success) {
+        console.log("Database connected")
+    } else {
+        console.error("Can't connect on database \n", { error: dbConnectionResult.error })
     }
+    console.log("server is running")
+}
 )
 
