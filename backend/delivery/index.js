@@ -9,7 +9,6 @@ server.use(express.json())
 server.use(upload.any())
 
 server.get('/', async (req, res) => {
-    console.log(new Owner())
     return res.json({ hello: "world" })
 })
 

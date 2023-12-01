@@ -4,8 +4,6 @@ services:
     container_name: backend
     build: /backend/delivery
     restart: always
-    volumes:
-      - ./backend/delivery:/app
     ports:
       - 8080:8080
     depends_on:
