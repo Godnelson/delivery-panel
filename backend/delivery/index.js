@@ -8,7 +8,7 @@ server.use(express.json())
 
 
 server.get('/', upload.any(), (req, res) => {
-    return res.send("Hello World")
+    return res.json({hello:"world"})
 })
 
 server.listen(8080, () => {
