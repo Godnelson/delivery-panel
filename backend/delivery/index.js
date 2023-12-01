@@ -6,9 +6,9 @@ const server = express()
 const upload = multer()
 
 server.use(express.json())
+server.use(upload.any())
 
-
-server.get('/', upload.any(), async (req, res) => {
+server.get('/', async (req, res) => {
     return res.json({ hello: "world" })
 })
 
