@@ -1,5 +1,4 @@
 import express from "express";
-import { uploadFile } from "./fileManager/upload.js";
 import multer from "multer";
 
 const server = express()
