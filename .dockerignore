@@ -1,2 +1,5 @@
 node_modules
-.devcontainer
+.dockerignore
+docker-compose.yaml
+Dockerfile
+.dockerignore
