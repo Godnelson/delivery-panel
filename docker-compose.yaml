@@ -20,8 +20,8 @@ services:
     command: ["mongod"]
     user: "root"
     environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: 123
+      MONGO_INITDB_ROOT_USERNAME: ${DATABASE_USER}
+      MONGO_INITDB_ROOT_PASSWORD: ${DATABASE_PASSWORD}
     volumes:
       - ./database:/data/db
     ports:
