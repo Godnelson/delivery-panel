@@ -8,10 +8,6 @@ const upload = multer()
 server.use(express.json())
 server.use(upload.any())
 
-server.get('/', async (req, res) => {
-    return res.json({ hello: "world" })
-})
-
 server.listen(8080, async () => {
     const dbConnectionResult = await NewMongoConnection()
     if (dbConnectionResult.success) {
