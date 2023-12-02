@@ -1,12 +1,14 @@
 import express from "express";
 import multer from "multer";
 import NewMongoConnection from "./src/database/connection.js";
+import { router } from "./src/routes.js";
 
 const server = express()
 const upload = multer()
 
 server.use(express.json())
 server.use(upload.any())
+server.use(router)
 
 server.listen(8080, async () => {
     const dbConnectionResult = await NewMongoConnection()

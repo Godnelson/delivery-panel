@@ -1,9 +1,9 @@
-const Restaurant = require(`../schema`)
+import Restaurant from "../schema"
 
-const findAllRestaurants = async (req, res) => {
-  res.send("all restaurants")
-}
-
-module.exports = {
-  findAllRestaurants,
+export const findAllRestaurants = async (req, res) => {
+  try {
+    res.send("all restaurants")
+  } catch (error) {
+    res.send("error")
+  }
 }

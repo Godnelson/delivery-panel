@@ -1,6 +1,7 @@
-const express = require("express")
-const router = express.Router()
-const multer = require("multer")
-const {findAllRestaurants} = require(`./domain/restaurant/service/findAllRestaurants`)
+import express from "express"
+export const router = express.Router()
+import multer from "multer"
+import {findAllRestaurants} from "./domain/restaurant/service/findAllRestaurants"
+//alguem me ajuda, n ta encontrando o arquivo
 
 router.get(`/`, findAllRestaurants)
