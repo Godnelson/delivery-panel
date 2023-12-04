@@ -1,9 +1,9 @@
-import Restaurant from "../schema"
+import Restaurant from "../schema.js"
 
 export const findAllRestaurants = async (req, res) => {
   try {
-    res.send("all restaurants")
-  } catch (error) {
-    res.send("error")
+    return Restaurant.find()
+  } catch (e) {
+    res.send(e)
   }
 }
