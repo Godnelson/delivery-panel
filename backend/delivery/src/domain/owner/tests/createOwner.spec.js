@@ -1,4 +1,4 @@
-import { ownersNameMissing } from "../errors/namesMissing.js"
+import OwnersNameMissing from "../errors/namesMissing.js"
 import createOwner from "../service/createOwner.js"
 
 describe('Create owner', () => {
@@ -7,6 +7,6 @@ describe('Create owner', () => {
             prof_pic: null,
             document: '12345678'
         }
-        createOwner(owner).catch(e => expect(e).equals(ownersNameMissing))
+        createOwner(owner).catch(e => expect(e).equals(OwnersNameMissing))
     })
  })

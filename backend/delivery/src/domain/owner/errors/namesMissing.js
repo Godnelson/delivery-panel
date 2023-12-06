@@ -1,1 +1,3 @@
-export const ownersNameMissing = new Error('Name is Missing!')
+const OwnersNameMissing = new Error('Name is Missing!')
+
+export default OwnersNameMissing
