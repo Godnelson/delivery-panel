@@ -11,7 +11,7 @@ COPY . .
 
 RUN npm i
 
-CMD ["node", "index.js"]
+CMD ["npm", "start"]
 
 EXPOSE 8080
 

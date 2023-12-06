@@ -1,6 +1,6 @@
 import express from "express";
 import multer from "multer";
-import NewMongoConnection from "./src/database/connection.js";
+import NewMongoConnection from "./database/connection.js";
 
 const server = express()
 const upload = multer()

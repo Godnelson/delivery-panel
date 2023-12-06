@@ -4,6 +4,7 @@ const OwnerSchema = new Schema({
     name: {first: String, last: String},
     prof_pic: String,
     document: String,
+    country: String
 })
 
 const Owner = mongoose.model('Owner', OwnerSchema)

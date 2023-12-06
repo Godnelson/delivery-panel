@@ -1,9 +1,6 @@
 import { ownersNameMissing } from "../errors/namesMissing.js"
 import createOwner from "../service/createOwner.js"
 
-
-jest.mock('../schema.js')
-
 describe('Create owner', () => {
     it('Cannot possible create an user without name', ()=>{
         const owner = {
