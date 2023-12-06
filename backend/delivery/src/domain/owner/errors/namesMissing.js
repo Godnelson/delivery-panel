@@ -1,3 +1,3 @@
-const OwnersNameMissing = new Error('Name is Missing!')
+const OwnersNameMissing = new TypeError('Name is Missing!')
 
 export default OwnersNameMissing

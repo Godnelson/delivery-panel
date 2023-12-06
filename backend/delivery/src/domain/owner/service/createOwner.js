@@ -1,13 +1,15 @@
-import { ownersNameMissing } from "../errors/namesMissing"
+import OwnersCNPJMissing from "../errors/cnpjsMissing"
+import OwnersNameMissing, { ownersNameMissing } from "../errors/namesMissing"
 import Owner from "../schema"
 
-export default async function createOwner(owner){
-    try{
-        if(owner.name == undefined){
-            throw ownersNameMissing
-        }
-        return await Owner.create(owner)
-    }catch(e){
-        console.error(e)
+export default async function createOwner(owner) {
+
+    if (owner.name == undefined) {
+        throw OwnersNameMissing
     }
+    if (owner.cnpj == undefined) {
+        throw OwnersCNPJMissing
+    }
+    return await Owner.create(owner)
+
 }
