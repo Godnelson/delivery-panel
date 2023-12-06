@@ -1,8 +1,8 @@
 import Owner from "../schema"
 
-export const findAllOwners = () => {
+export default async function findAllOwners(){
     try{
-        return Owner.find()
+        return await Owner.find()
     }catch(e){
         console.error(e)
     }

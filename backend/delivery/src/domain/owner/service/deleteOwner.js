@@ -1,8 +1,8 @@
 import Owner from "../schema"
 
-export const deleteOwner = (owner) => {
+export default async function deleteOwner(owner){
     try{
-        return Owner.findByIdAndDelete({id: owner.id}, owner)
+        return await Owner.findByIdAndDelete({id: owner.id}, owner)
     }catch(e){
         console.error(e)
     }
